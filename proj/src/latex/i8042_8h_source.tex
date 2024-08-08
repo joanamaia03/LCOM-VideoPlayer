@@ -1,0 +1,80 @@
+\hypertarget{i8042_8h_source}{}\doxysection{i8042.\+h}
+\mbox{\hyperlink{i8042_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_LCOM\_I8042\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_LCOM\_I8042\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{/*Data input*/}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define STAT\_REG 0x64 }\textcolor{comment}{//lê os estados do KBC}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define OUT\_BUF 0x60 }\textcolor{comment}{//recebe e lê os scancodes}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define KBC\_IRQ 1 }\textcolor{comment}{//IRQ line do KBC}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define MOUSE\_IRQ 12 }\textcolor{comment}{//IRQ line do mouse}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define COMMAND\_KBC 0X64 }\textcolor{comment}{//envia comandos para o KBC}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define ARGUMENTS\_KBC 0X60 }\textcolor{comment}{//envia argumentos de comandos do KBC}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{comment}{/*Status Register*/}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define PARITY BIT(7) }\textcolor{comment}{//erro:dados inválidos}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define TIMEOUT BIT(6) }\textcolor{comment}{//erro:dados inválidos}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define AUX BIT(5) }\textcolor{comment}{// dados do mouse}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define INH BIT(4) }\textcolor{comment}{//0 se o keyboard estiver inhibited}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define IBF BIT(1) }\textcolor{comment}{//nao ecreve comandos nem argumentos}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define OBF BIT(0) }\textcolor{comment}{//dados disponíveis para leitura}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define KBC\_INT BIT(0) }\textcolor{comment}{//verifica se os interruptores estão enabled}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define IS\_BREAK BIT(7) }\textcolor{comment}{//verifica se o scancode é um breakcode}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{comment}{/*Scancodes*/}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define BREAKCODE\_ESC 0X81 }\textcolor{comment}{//breakcode da tecla ESC}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define TWO\_BYTE\_SCAN 0XE0 }\textcolor{comment}{//primeiro byte dos scancodes de 2 bytes}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define MAKECODE\_ESC 0X01 }\textcolor{comment}{//makecode da tecla ESC}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define BREAKCODE\_SPACE 0x39}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{comment}{/*KBC commands*/}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define READ\_COMMAND 0X20 }}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define WRITE\_COMMAND 0X60}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define WRITE\_MOUSE 0XD4}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define CHECK\_KBC 0XAA }\textcolor{comment}{//autoteste}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define OK\_CHECK\_KBC 0X55 }\textcolor{comment}{//retorna 0x55 se OK}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define ERROR\_CHECK\_KBC 0XFC }\textcolor{comment}{//retorna 0xFC se erro}}
+\DoxyCodeLine{39 \textcolor{comment}{}\#define CHECK\_KEYBOARD 0XAB \textcolor{comment}{//verifica a interface}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define CHECK\_MOUSE 0XA9 }}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define OK\_CHECK\_KEYBOARD 0X00 }\textcolor{comment}{//retorna 0 se OK}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define OK\_CHECK\_MOUSE 0X00}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define DISABLE\_KBD 0XAD}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define ENABLE\_KBD 0XAE}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define DISABLE\_MOUSE 0XA7}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define ENABLE\_MOUSE 0XA8}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define DIS2 BIT(5) }\textcolor{comment}{//disable mouse}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define DIS1 BIT(4) }\textcolor{comment}{//disable keyboard}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define INT2 BIT(1) }\textcolor{comment}{//enable interrupt on OBF, from mouse}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define INT1 BIT(0) }\textcolor{comment}{//enable interrupt on OBF, from keyboard}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define FIRST\_BYTE BIT(3) }\textcolor{comment}{//verifica se recebemos o primeiro bit do pacote}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{comment}{/*Keys keyboard*/}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define LEFT\_ARROW    0x4b}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define RIGHT\_ARROW   0x4d}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define ENTER         0x1c}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{comment}{/*Mouse Commands*/}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define RESET\_MOUSE 0XFF}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define RESEND 0XFE }\textcolor{comment}{//erros de comunicação}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define SET\_DEFAULT 0XF6 }\textcolor{comment}{//valor de default do mouse}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define DISABLE 0XF5 }\textcolor{comment}{//em stream mode}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define ENABLE 0XF4 }\textcolor{comment}{//em stream mode}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define SAMPLE\_RATE 0XF3 }\textcolor{comment}{//define a state sampling rate}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define REMOTE\_MODE 0XF0 }\textcolor{comment}{//envia dados apenas a pedido}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define READ\_DATA 0XEB }\textcolor{comment}{//envia pedido de pacote de dados}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define STREAM\_MODE 0XEA }\textcolor{comment}{//envia dados em eventos}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define STAT\_REQUEST 0XE9 }\textcolor{comment}{//configuração do mouse}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define RESOLUTION 0XE8}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define SCAL\_ACEL 0XE7 }\textcolor{comment}{//escala 2:1}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define SCAL\_LIN 0XE6 }\textcolor{comment}{//escala 1:1}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define WRITE\_TO\_MOUSE 0XD4 }\textcolor{comment}{//escrever o byte no mouse}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define ACK 0XFA }\textcolor{comment}{//se esta tudo ok}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define NACK 0XFE }\textcolor{comment}{//se o byte for invalido}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define ERROR 0XFC }\textcolor{comment}{//se o byte estiver errado duas vezes consecutivas}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* \_LCOM\_I8042\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,37 @@
+\hypertarget{graphic_8h_source}{}\doxysection{graphic.\+h}
+\mbox{\hyperlink{graphic_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef \_LCOM\_GRAPHIC\_H\_}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define \_LCOM\_GRAPHIC\_H\_}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <minix/sysutil.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <machine/int86.h>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <lcom/lab5.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <lcom/xpm.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <lcom/pixmap.h>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{16 int(\mbox{\hyperlink{graphic_8h_a849549196c57704a1a80c769233113e6}{graphic\_set\_VBE\_mode}})(uint16\_t mode);}
+\DoxyCodeLine{19 int(\mbox{\hyperlink{graphic_8h_a30ed9883c32d0132070d075cd4271bb1}{changePixelColor}})(uint16\_t x,uint16\_t y,uint32\_t color);}
+\DoxyCodeLine{22 int(\mbox{\hyperlink{graphic_8h_a5e5b25bd525250f61f40b9e9f212d5e6}{vg\_draw\_hline}})(uint16\_t x,uint16\_t y,uint16\_t len,uint32\_t color);}
+\DoxyCodeLine{25 int(\mbox{\hyperlink{graphic_8h_ae7da51bbdc953713b47fa2da2ff7aff0}{graphic\_draw\_rectangle}})(uint16\_t x,uint16\_t y,uint16\_t width,uint16\_t height,uint32\_t color);}
+\DoxyCodeLine{28 int(\mbox{\hyperlink{graphic_8h_aa917b820e3651b8e0ecc8cc57959d665}{xmp\_draw}})(xpm\_image\_t img,xpm\_map\_t xpm, uint16\_t x, uint16\_t y);}
+\DoxyCodeLine{31 uint32\_t (\mbox{\hyperlink{graphic_8h_ae3578c57c17dced18fd11d48af250188}{Red}})(\textcolor{keywordtype}{unsigned} j, uint8\_t step, uint32\_t first);}
+\DoxyCodeLine{34 uint32\_t (\mbox{\hyperlink{graphic_8h_a7c12138f0957d4270d1b4c0c164f17d3}{Green}})(\textcolor{keywordtype}{unsigned} j, uint8\_t step, uint32\_t first);}
+\DoxyCodeLine{37 uint32\_t (\mbox{\hyperlink{graphic_8h_a83fd02ad635b3d382b8ab30d465ca4a9}{Blue}})(\textcolor{keywordtype}{unsigned} j,\textcolor{keywordtype}{unsigned} i, uint8\_t step, uint32\_t first);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 int(\mbox{\hyperlink{graphic_8h_a12aad2b9bf85187614279b5cd05ee5e8}{draw\_frame}})(uint16\_t x, uint16\_t y, uint16\_t width, uint16\_t height, \textcolor{keywordtype}{char}* buffer);}
+\DoxyCodeLine{42 uint32\_t (\mbox{\hyperlink{graphic_8h_a3b0ee3706bd0c5bd06c24cd519b26f39}{R}})(uint32\_t first);}
+\DoxyCodeLine{45 uint32\_t (\mbox{\hyperlink{graphic_8h_a1c221f260a94426d6e484757ff49491a}{B}})(uint32\_t first);}
+\DoxyCodeLine{48 uint32\_t (\mbox{\hyperlink{graphic_8h_a34103732d16ab1b6ad266f756d0ec569}{G}})(uint32\_t first);}
+\DoxyCodeLine{51 uint32\_t (\mbox{\hyperlink{graphic_8h_a00cbe3ad8ffc67411a11b96b6237fba3}{direct\_mode}})(uint32\_t \mbox{\hyperlink{graphic_8h_a3b0ee3706bd0c5bd06c24cd519b26f39}{R}}, uint32\_t \mbox{\hyperlink{graphic_8h_a34103732d16ab1b6ad266f756d0ec569}{G}}, uint32\_t \mbox{\hyperlink{graphic_8h_a1c221f260a94426d6e484757ff49491a}{B}});}
+\DoxyCodeLine{54 uint32\_t (\mbox{\hyperlink{graphic_8h_ab1b6b16c005069e07ec294d25c7143a1}{indexed\_mode}})(uint16\_t col, uint16\_t row, uint8\_t step, uint32\_t first, uint8\_t n);}
+\DoxyCodeLine{57 int(\mbox{\hyperlink{graphic_8h_a50d56be214cc13d5aa2a44e4bd0544cf}{xmp\_draw\_char}})(xpm\_image\_t img,xpm\_map\_t xpm, uint16\_t x, uint16\_t y,\textcolor{keywordtype}{char} a);}
+\DoxyCodeLine{60 void (\mbox{\hyperlink{graphic_8h_a4fb8d0551b0759ecddd1ddea0c3bd161}{readFrame}})(\textcolor{keywordtype}{int}* Pwidth, \textcolor{keywordtype}{int}* Pheight, \textcolor{keywordtype}{char}* buff2);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{63 }
+
+\end{DoxyCode}

@@ -1,0 +1,203 @@
+\hypertarget{graphic_8h}{}\doxysection{graphic.\+h File Reference}
+\label{graphic_8h}\index{graphic.h@{graphic.h}}
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$machine/int86.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lab5.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/xpm.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/pixmap.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{graphic_8h_a849549196c57704a1a80c769233113e6}{graphic\+\_\+set\+\_\+\+VBE\+\_\+mode}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Provides functions that are related to the graphics manipulation in VBE mode. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{graphic_8h_a30ed9883c32d0132070d075cd4271bb1}{change\+Pixel\+Color}} (uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em The function \mbox{\hyperlink{graphic_8h_a30ed9883c32d0132070d075cd4271bb1}{change\+Pixel\+Color(uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color)}} changes the color of a pixel at position (x, y) in the framebuffer. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{graphic_8h_a5e5b25bd525250f61f40b9e9f212d5e6}{vg\+\_\+draw\+\_\+hline}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t len, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em The function \mbox{\hyperlink{graphic_8h_a5e5b25bd525250f61f40b9e9f212d5e6}{vg\+\_\+draw\+\_\+hline(uint16\+\_\+t x,uint16\+\_\+t y,uint16\+\_\+t len,uint32\+\_\+t color)}} draws a horizontal line in the framebuffer. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{graphic_8h_ae7da51bbdc953713b47fa2da2ff7aff0}{graphic\+\_\+draw\+\_\+rectangle}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t width, uint16\+\_\+t height, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em The function \mbox{\hyperlink{graphic_8h_ae7da51bbdc953713b47fa2da2ff7aff0}{graphic\+\_\+draw\+\_\+rectangle(uint16\+\_\+t x,uint16\+\_\+t y,uint16\+\_\+t width,uint16\+\_\+t height,uint32\+\_\+t color)}} draws a rectangle in the framebuffer. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{graphic_8h_aa917b820e3651b8e0ecc8cc57959d665}{xmp\+\_\+draw}} (xpm\+\_\+image\+\_\+t img, xpm\+\_\+map\+\_\+t xpm, uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em The function \mbox{\hyperlink{graphic_8h_aa917b820e3651b8e0ecc8cc57959d665}{xmp\+\_\+draw(xpm\+\_\+image\+\_\+t img, xpm\+\_\+map\+\_\+t xpm, uint16\+\_\+t x, uint16\+\_\+t y)}} draws an XPM image in the framebuffer. \end{DoxyCompactList}\item 
+uint32\+\_\+t() \mbox{\hyperlink{graphic_8h_ae3578c57c17dced18fd11d48af250188}{Red}} (unsigned j, uint8\+\_\+t step, uint32\+\_\+t first)
+\begin{DoxyCompactList}\small\item\em This function calculates the value of the red component of a color, based on an initial value first, an index j and a step. \end{DoxyCompactList}\item 
+uint32\+\_\+t() \mbox{\hyperlink{graphic_8h_a7c12138f0957d4270d1b4c0c164f17d3}{Green}} (unsigned j, uint8\+\_\+t step, uint32\+\_\+t first)
+\begin{DoxyCompactList}\small\item\em This function calculates the value of the green component of a color, based on an initial value first, an index i and a step. \end{DoxyCompactList}\item 
+uint32\+\_\+t() \mbox{\hyperlink{graphic_8h_a83fd02ad635b3d382b8ab30d465ca4a9}{Blue}} (unsigned j, unsigned i, uint8\+\_\+t step, uint32\+\_\+t first)
+\begin{DoxyCompactList}\small\item\em This function calculates the value of the blue component of a color, based on an initial value first, indices i and j, and a step. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{graphic_8h_a12aad2b9bf85187614279b5cd05ee5e8}{draw\+\_\+frame}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t width, uint16\+\_\+t height, char $\ast$buffer)
+\item 
+uint32\+\_\+t() \mbox{\hyperlink{graphic_8h_a3b0ee3706bd0c5bd06c24cd519b26f39}{R}} (uint32\+\_\+t first)
+\begin{DoxyCompactList}\small\item\em This function extracts the red component of a color, based on the first value. \end{DoxyCompactList}\item 
+uint32\+\_\+t() \mbox{\hyperlink{graphic_8h_a1c221f260a94426d6e484757ff49491a}{B}} (uint32\+\_\+t first)
+\begin{DoxyCompactList}\small\item\em This function extracts the blue component of a color, based on the first value. \end{DoxyCompactList}\item 
+uint32\+\_\+t() \mbox{\hyperlink{graphic_8h_a34103732d16ab1b6ad266f756d0ec569}{G}} (uint32\+\_\+t first)
+\begin{DoxyCompactList}\small\item\em This function extracts the green component of a color, based on the first value. \end{DoxyCompactList}\item 
+uint32\+\_\+t() \mbox{\hyperlink{graphic_8h_a00cbe3ad8ffc67411a11b96b6237fba3}{direct\+\_\+mode}} (uint32\+\_\+t \mbox{\hyperlink{graphic_8c_a3b0ee3706bd0c5bd06c24cd519b26f39}{R}}, uint32\+\_\+t \mbox{\hyperlink{graphic_8c_a34103732d16ab1b6ad266f756d0ec569}{G}}, uint32\+\_\+t \mbox{\hyperlink{graphic_8c_a1c221f260a94426d6e484757ff49491a}{B}})
+\begin{DoxyCompactList}\small\item\em This function combines the values of the red, green and blue components to form one color in spot color mode. \end{DoxyCompactList}\item 
+uint32\+\_\+t() \mbox{\hyperlink{graphic_8h_ab1b6b16c005069e07ec294d25c7143a1}{indexed\+\_\+mode}} (uint16\+\_\+t col, uint16\+\_\+t row, uint8\+\_\+t step, uint32\+\_\+t first, uint8\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em This function calculates a color value for the indexed color mode, based on the coordinates col and row, a step step, a start value first and the number of colors n. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{graphic_8h_a50d56be214cc13d5aa2a44e4bd0544cf}{xmp\+\_\+draw\+\_\+char}} (xpm\+\_\+image\+\_\+t img, xpm\+\_\+map\+\_\+t xpm, uint16\+\_\+t x, uint16\+\_\+t y, char a)
+\begin{DoxyCompactList}\small\item\em The function \mbox{\hyperlink{graphic_8h_a50d56be214cc13d5aa2a44e4bd0544cf}{xmp\+\_\+draw\+\_\+char(xpm\+\_\+image\+\_\+t img, xpm\+\_\+map\+\_\+t xpm, uint16\+\_\+t x, uint16\+\_\+t y, char a)}} draws a specific character from an XPM font in the framebuffer. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{graphic_8h_a4fb8d0551b0759ecddd1ddea0c3bd161}{read\+Frame}} (int $\ast$Pwidth, int $\ast$Pheight, char $\ast$buff2)
+\begin{DoxyCompactList}\small\item\em The function read\+\_\+frame() is responsible for passing the frames that come from the codec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{graphic_8h_a1c221f260a94426d6e484757ff49491a}\label{graphic_8h_a1c221f260a94426d6e484757ff49491a}} 
+\index{graphic.h@{graphic.h}!B@{B}}
+\index{B@{B}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{B()}{B()}}
+{\footnotesize\ttfamily uint32\+\_\+t() B (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{first }\end{DoxyParamCaption})}
+
+
+
+This function extracts the blue component of a color, based on the first value. 
+
+~\newline
+ \mbox{\Hypertarget{graphic_8h_a83fd02ad635b3d382b8ab30d465ca4a9}\label{graphic_8h_a83fd02ad635b3d382b8ab30d465ca4a9}} 
+\index{graphic.h@{graphic.h}!Blue@{Blue}}
+\index{Blue@{Blue}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{Blue()}{Blue()}}
+{\footnotesize\ttfamily uint32\+\_\+t() Blue (\begin{DoxyParamCaption}\item[{unsigned}]{j,  }\item[{unsigned}]{i,  }\item[{uint8\+\_\+t}]{step,  }\item[{uint32\+\_\+t}]{first }\end{DoxyParamCaption})}
+
+
+
+This function calculates the value of the blue component of a color, based on an initial value first, indices i and j, and a step. 
+
+\mbox{\Hypertarget{graphic_8h_a30ed9883c32d0132070d075cd4271bb1}\label{graphic_8h_a30ed9883c32d0132070d075cd4271bb1}} 
+\index{graphic.h@{graphic.h}!changePixelColor@{changePixelColor}}
+\index{changePixelColor@{changePixelColor}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{changePixelColor()}{changePixelColor()}}
+{\footnotesize\ttfamily int() change\+Pixel\+Color (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+The function \mbox{\hyperlink{graphic_8h_a30ed9883c32d0132070d075cd4271bb1}{change\+Pixel\+Color(uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color)}} changes the color of a pixel at position (x, y) in the framebuffer. 
+
+\mbox{\Hypertarget{graphic_8h_a00cbe3ad8ffc67411a11b96b6237fba3}\label{graphic_8h_a00cbe3ad8ffc67411a11b96b6237fba3}} 
+\index{graphic.h@{graphic.h}!direct\_mode@{direct\_mode}}
+\index{direct\_mode@{direct\_mode}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{direct\_mode()}{direct\_mode()}}
+{\footnotesize\ttfamily uint32\+\_\+t() direct\+\_\+mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{R,  }\item[{uint32\+\_\+t}]{G,  }\item[{uint32\+\_\+t}]{B }\end{DoxyParamCaption})}
+
+
+
+This function combines the values of the red, green and blue components to form one color in spot color mode. 
+
+\mbox{\Hypertarget{graphic_8h_a12aad2b9bf85187614279b5cd05ee5e8}\label{graphic_8h_a12aad2b9bf85187614279b5cd05ee5e8}} 
+\index{graphic.h@{graphic.h}!draw\_frame@{draw\_frame}}
+\index{draw\_frame@{draw\_frame}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{draw\_frame()}{draw\_frame()}}
+{\footnotesize\ttfamily int() draw\+\_\+frame (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{width,  }\item[{uint16\+\_\+t}]{height,  }\item[{char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{graphic_8h_a34103732d16ab1b6ad266f756d0ec569}\label{graphic_8h_a34103732d16ab1b6ad266f756d0ec569}} 
+\index{graphic.h@{graphic.h}!G@{G}}
+\index{G@{G}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{G()}{G()}}
+{\footnotesize\ttfamily uint32\+\_\+t() G (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{first }\end{DoxyParamCaption})}
+
+
+
+This function extracts the green component of a color, based on the first value. 
+
+\mbox{\Hypertarget{graphic_8h_ae7da51bbdc953713b47fa2da2ff7aff0}\label{graphic_8h_ae7da51bbdc953713b47fa2da2ff7aff0}} 
+\index{graphic.h@{graphic.h}!graphic\_draw\_rectangle@{graphic\_draw\_rectangle}}
+\index{graphic\_draw\_rectangle@{graphic\_draw\_rectangle}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{graphic\_draw\_rectangle()}{graphic\_draw\_rectangle()}}
+{\footnotesize\ttfamily int() graphic\+\_\+draw\+\_\+rectangle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{width,  }\item[{uint16\+\_\+t}]{height,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+The function \mbox{\hyperlink{graphic_8h_ae7da51bbdc953713b47fa2da2ff7aff0}{graphic\+\_\+draw\+\_\+rectangle(uint16\+\_\+t x,uint16\+\_\+t y,uint16\+\_\+t width,uint16\+\_\+t height,uint32\+\_\+t color)}} draws a rectangle in the framebuffer. 
+
+\mbox{\Hypertarget{graphic_8h_a849549196c57704a1a80c769233113e6}\label{graphic_8h_a849549196c57704a1a80c769233113e6}} 
+\index{graphic.h@{graphic.h}!graphic\_set\_VBE\_mode@{graphic\_set\_VBE\_mode}}
+\index{graphic\_set\_VBE\_mode@{graphic\_set\_VBE\_mode}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{graphic\_set\_VBE\_mode()}{graphic\_set\_VBE\_mode()}}
+{\footnotesize\ttfamily int() graphic\+\_\+set\+\_\+\+VBE\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Provides functions that are related to the graphics manipulation in VBE mode. 
+
+The function \mbox{\hyperlink{graphic_8h_a849549196c57704a1a80c769233113e6}{graphic\+\_\+set\+\_\+\+VBE\+\_\+mode(uint16\+\_\+t mode)}} is responsible for setting the specified VBE mode. \mbox{\Hypertarget{graphic_8h_a7c12138f0957d4270d1b4c0c164f17d3}\label{graphic_8h_a7c12138f0957d4270d1b4c0c164f17d3}} 
+\index{graphic.h@{graphic.h}!Green@{Green}}
+\index{Green@{Green}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{Green()}{Green()}}
+{\footnotesize\ttfamily uint32\+\_\+t() Green (\begin{DoxyParamCaption}\item[{unsigned}]{j,  }\item[{uint8\+\_\+t}]{step,  }\item[{uint32\+\_\+t}]{first }\end{DoxyParamCaption})}
+
+
+
+This function calculates the value of the green component of a color, based on an initial value first, an index i and a step. 
+
+\mbox{\Hypertarget{graphic_8h_ab1b6b16c005069e07ec294d25c7143a1}\label{graphic_8h_ab1b6b16c005069e07ec294d25c7143a1}} 
+\index{graphic.h@{graphic.h}!indexed\_mode@{indexed\_mode}}
+\index{indexed\_mode@{indexed\_mode}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{indexed\_mode()}{indexed\_mode()}}
+{\footnotesize\ttfamily uint32\+\_\+t() indexed\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{col,  }\item[{uint16\+\_\+t}]{row,  }\item[{uint8\+\_\+t}]{step,  }\item[{uint32\+\_\+t}]{first,  }\item[{uint8\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+This function calculates a color value for the indexed color mode, based on the coordinates col and row, a step step, a start value first and the number of colors n. 
+
+\mbox{\Hypertarget{graphic_8h_a3b0ee3706bd0c5bd06c24cd519b26f39}\label{graphic_8h_a3b0ee3706bd0c5bd06c24cd519b26f39}} 
+\index{graphic.h@{graphic.h}!R@{R}}
+\index{R@{R}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{R()}{R()}}
+{\footnotesize\ttfamily uint32\+\_\+t() R (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{first }\end{DoxyParamCaption})}
+
+
+
+This function extracts the red component of a color, based on the first value. 
+
+\mbox{\Hypertarget{graphic_8h_a4fb8d0551b0759ecddd1ddea0c3bd161}\label{graphic_8h_a4fb8d0551b0759ecddd1ddea0c3bd161}} 
+\index{graphic.h@{graphic.h}!readFrame@{readFrame}}
+\index{readFrame@{readFrame}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{readFrame()}{readFrame()}}
+{\footnotesize\ttfamily void() read\+Frame (\begin{DoxyParamCaption}\item[{int $\ast$}]{Pwidth,  }\item[{int $\ast$}]{Pheight,  }\item[{char $\ast$}]{buff2 }\end{DoxyParamCaption})}
+
+
+
+The function read\+\_\+frame() is responsible for passing the frames that come from the codec. 
+
+\mbox{\Hypertarget{graphic_8h_ae3578c57c17dced18fd11d48af250188}\label{graphic_8h_ae3578c57c17dced18fd11d48af250188}} 
+\index{graphic.h@{graphic.h}!Red@{Red}}
+\index{Red@{Red}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{Red()}{Red()}}
+{\footnotesize\ttfamily uint32\+\_\+t() Red (\begin{DoxyParamCaption}\item[{unsigned}]{j,  }\item[{uint8\+\_\+t}]{step,  }\item[{uint32\+\_\+t}]{first }\end{DoxyParamCaption})}
+
+
+
+This function calculates the value of the red component of a color, based on an initial value first, an index j and a step. 
+
+\mbox{\Hypertarget{graphic_8h_a5e5b25bd525250f61f40b9e9f212d5e6}\label{graphic_8h_a5e5b25bd525250f61f40b9e9f212d5e6}} 
+\index{graphic.h@{graphic.h}!vg\_draw\_hline@{vg\_draw\_hline}}
+\index{vg\_draw\_hline@{vg\_draw\_hline}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_hline()}{vg\_draw\_hline()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+hline (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{len,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+The function \mbox{\hyperlink{graphic_8h_a5e5b25bd525250f61f40b9e9f212d5e6}{vg\+\_\+draw\+\_\+hline(uint16\+\_\+t x,uint16\+\_\+t y,uint16\+\_\+t len,uint32\+\_\+t color)}} draws a horizontal line in the framebuffer. 
+
+\mbox{\Hypertarget{graphic_8h_aa917b820e3651b8e0ecc8cc57959d665}\label{graphic_8h_aa917b820e3651b8e0ecc8cc57959d665}} 
+\index{graphic.h@{graphic.h}!xmp\_draw@{xmp\_draw}}
+\index{xmp\_draw@{xmp\_draw}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{xmp\_draw()}{xmp\_draw()}}
+{\footnotesize\ttfamily int() xmp\+\_\+draw (\begin{DoxyParamCaption}\item[{xpm\+\_\+image\+\_\+t}]{img,  }\item[{xpm\+\_\+map\+\_\+t}]{xpm,  }\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+The function \mbox{\hyperlink{graphic_8h_aa917b820e3651b8e0ecc8cc57959d665}{xmp\+\_\+draw(xpm\+\_\+image\+\_\+t img, xpm\+\_\+map\+\_\+t xpm, uint16\+\_\+t x, uint16\+\_\+t y)}} draws an XPM image in the framebuffer. 
+
+\mbox{\Hypertarget{graphic_8h_a50d56be214cc13d5aa2a44e4bd0544cf}\label{graphic_8h_a50d56be214cc13d5aa2a44e4bd0544cf}} 
+\index{graphic.h@{graphic.h}!xmp\_draw\_char@{xmp\_draw\_char}}
+\index{xmp\_draw\_char@{xmp\_draw\_char}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{xmp\_draw\_char()}{xmp\_draw\_char()}}
+{\footnotesize\ttfamily int() xmp\+\_\+draw\+\_\+char (\begin{DoxyParamCaption}\item[{xpm\+\_\+image\+\_\+t}]{img,  }\item[{xpm\+\_\+map\+\_\+t}]{xpm,  }\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{char}]{a }\end{DoxyParamCaption})}
+
+
+
+The function \mbox{\hyperlink{graphic_8h_a50d56be214cc13d5aa2a44e4bd0544cf}{xmp\+\_\+draw\+\_\+char(xpm\+\_\+image\+\_\+t img, xpm\+\_\+map\+\_\+t xpm, uint16\+\_\+t x, uint16\+\_\+t y, char a)}} draws a specific character from an XPM font in the framebuffer. 
+

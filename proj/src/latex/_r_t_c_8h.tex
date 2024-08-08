@@ -1,0 +1,114 @@
+\hypertarget{_r_t_c_8h}{}\doxysection{RTC.\+h File Reference}
+\label{_r_t_c_8h}\index{RTC.h@{RTC.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/utils.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_r_t_c_8h_a2ebe3d816d8b2e9f1be075554e4135b3}{RTC\+\_\+\+UIP}}~BIT(7)
+\begin{DoxyCompactList}\small\item\em Provides functions that keep and give information about the time that a filed was added. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_r_t_c_8h_a710b98232df2c563009e6f8a6cd18220}{RTC\+\_\+\+ADDR\+\_\+\+REG}}~0x70
+\item 
+\#define \mbox{\hyperlink{_r_t_c_8h_a2f258a00c59c3f347c8d2d4a75471ce0}{RTC\+\_\+\+DATA\+\_\+\+REG}}~0\+X71
+\item 
+\#define \mbox{\hyperlink{_r_t_c_8h_ae5ffad506b363f28bed1bb5e5926bd2d}{RTC\+\_\+\+REG\+\_\+A}}~10
+\item 
+\#define \mbox{\hyperlink{_r_t_c_8h_a03954a63ead3f02b7790ce79e9877eea}{RTC\+\_\+\+REG\+\_\+B}}~11
+\item 
+\#define \mbox{\hyperlink{_r_t_c_8h_a1bd6f771dc313129723812fe7ac52d9e}{RTC\+\_\+\+REG\+\_\+C}}~12
+\item 
+\#define \mbox{\hyperlink{_r_t_c_8h_a34c8604ade07f4f7ff7e919f2d4c56b4}{RTC\+\_\+\+REG\+\_\+D}}~13
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{_r_t_c_8h_a5a85ec2ed7e470ac97c98e8909a6a5b6}{rtc\+\_\+wait\+\_\+valid}} (void)
+\item 
+void() \mbox{\hyperlink{_r_t_c_8h_acf4afdde5a7f1b4de7af109e3a69c4a5}{rtc\+\_\+enable}} (void)
+\item 
+void() \mbox{\hyperlink{_r_t_c_8h_a6cfc801ff94690bedf757426b87718fd}{rtc\+\_\+disable}} (void)
+\item 
+int() \mbox{\hyperlink{_r_t_c_8h_afe75605232ac2e188469ac9073c6fbbd}{rtc\+\_\+insert\+\_\+instruction}} (uint8\+\_\+t arrpos, uint8\+\_\+t $\ast$ans)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_r_t_c_8h_a710b98232df2c563009e6f8a6cd18220}\label{_r_t_c_8h_a710b98232df2c563009e6f8a6cd18220}} 
+\index{RTC.h@{RTC.h}!RTC\_ADDR\_REG@{RTC\_ADDR\_REG}}
+\index{RTC\_ADDR\_REG@{RTC\_ADDR\_REG}!RTC.h@{RTC.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_ADDR\_REG}{RTC\_ADDR\_REG}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ADDR\+\_\+\+REG~0x70}
+
+\mbox{\Hypertarget{_r_t_c_8h_a2f258a00c59c3f347c8d2d4a75471ce0}\label{_r_t_c_8h_a2f258a00c59c3f347c8d2d4a75471ce0}} 
+\index{RTC.h@{RTC.h}!RTC\_DATA\_REG@{RTC\_DATA\_REG}}
+\index{RTC\_DATA\_REG@{RTC\_DATA\_REG}!RTC.h@{RTC.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_DATA\_REG}{RTC\_DATA\_REG}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+DATA\+\_\+\+REG~0\+X71}
+
+\mbox{\Hypertarget{_r_t_c_8h_ae5ffad506b363f28bed1bb5e5926bd2d}\label{_r_t_c_8h_ae5ffad506b363f28bed1bb5e5926bd2d}} 
+\index{RTC.h@{RTC.h}!RTC\_REG\_A@{RTC\_REG\_A}}
+\index{RTC\_REG\_A@{RTC\_REG\_A}!RTC.h@{RTC.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_REG\_A}{RTC\_REG\_A}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+REG\+\_\+A~10}
+
+\mbox{\Hypertarget{_r_t_c_8h_a03954a63ead3f02b7790ce79e9877eea}\label{_r_t_c_8h_a03954a63ead3f02b7790ce79e9877eea}} 
+\index{RTC.h@{RTC.h}!RTC\_REG\_B@{RTC\_REG\_B}}
+\index{RTC\_REG\_B@{RTC\_REG\_B}!RTC.h@{RTC.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_REG\_B}{RTC\_REG\_B}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+REG\+\_\+B~11}
+
+\mbox{\Hypertarget{_r_t_c_8h_a1bd6f771dc313129723812fe7ac52d9e}\label{_r_t_c_8h_a1bd6f771dc313129723812fe7ac52d9e}} 
+\index{RTC.h@{RTC.h}!RTC\_REG\_C@{RTC\_REG\_C}}
+\index{RTC\_REG\_C@{RTC\_REG\_C}!RTC.h@{RTC.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_REG\_C}{RTC\_REG\_C}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+REG\+\_\+C~12}
+
+\mbox{\Hypertarget{_r_t_c_8h_a34c8604ade07f4f7ff7e919f2d4c56b4}\label{_r_t_c_8h_a34c8604ade07f4f7ff7e919f2d4c56b4}} 
+\index{RTC.h@{RTC.h}!RTC\_REG\_D@{RTC\_REG\_D}}
+\index{RTC\_REG\_D@{RTC\_REG\_D}!RTC.h@{RTC.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_REG\_D}{RTC\_REG\_D}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+REG\+\_\+D~13}
+
+\mbox{\Hypertarget{_r_t_c_8h_a2ebe3d816d8b2e9f1be075554e4135b3}\label{_r_t_c_8h_a2ebe3d816d8b2e9f1be075554e4135b3}} 
+\index{RTC.h@{RTC.h}!RTC\_UIP@{RTC\_UIP}}
+\index{RTC\_UIP@{RTC\_UIP}!RTC.h@{RTC.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_UIP}{RTC\_UIP}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+UIP~BIT(7)}
+
+
+
+Provides functions that keep and give information about the time that a filed was added. 
+
+The function \mbox{\hyperlink{_r_t_c_8h_a5a85ec2ed7e470ac97c98e8909a6a5b6}{rtc\+\_\+wait\+\_\+valid(void)}} waits until the RTC is ready to be accessed.
+
+The function \mbox{\hyperlink{_r_t_c_8h_acf4afdde5a7f1b4de7af109e3a69c4a5}{rtc\+\_\+enable()}} activates the RTC.
+
+The function \mbox{\hyperlink{_r_t_c_8h_a6cfc801ff94690bedf757426b87718fd}{rtc\+\_\+disable()}} disables the RTC.
+
+The function \mbox{\hyperlink{_r_t_c_8h_afe75605232ac2e188469ac9073c6fbbd}{rtc\+\_\+insert\+\_\+instruction(uint8\+\_\+t arrpos, uint8\+\_\+t $\ast$ans)}} reads the value from a specific RTC register. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_r_t_c_8h_a6cfc801ff94690bedf757426b87718fd}\label{_r_t_c_8h_a6cfc801ff94690bedf757426b87718fd}} 
+\index{RTC.h@{RTC.h}!rtc\_disable@{rtc\_disable}}
+\index{rtc\_disable@{rtc\_disable}!RTC.h@{RTC.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_disable()}{rtc\_disable()}}
+{\footnotesize\ttfamily void() rtc\+\_\+disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_r_t_c_8h_acf4afdde5a7f1b4de7af109e3a69c4a5}\label{_r_t_c_8h_acf4afdde5a7f1b4de7af109e3a69c4a5}} 
+\index{RTC.h@{RTC.h}!rtc\_enable@{rtc\_enable}}
+\index{rtc\_enable@{rtc\_enable}!RTC.h@{RTC.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_enable()}{rtc\_enable()}}
+{\footnotesize\ttfamily void() rtc\+\_\+enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_r_t_c_8h_afe75605232ac2e188469ac9073c6fbbd}\label{_r_t_c_8h_afe75605232ac2e188469ac9073c6fbbd}} 
+\index{RTC.h@{RTC.h}!rtc\_insert\_instruction@{rtc\_insert\_instruction}}
+\index{rtc\_insert\_instruction@{rtc\_insert\_instruction}!RTC.h@{RTC.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_insert\_instruction()}{rtc\_insert\_instruction()}}
+{\footnotesize\ttfamily int() rtc\+\_\+insert\+\_\+instruction (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{arrpos,  }\item[{uint8\+\_\+t $\ast$}]{ans }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_r_t_c_8h_a5a85ec2ed7e470ac97c98e8909a6a5b6}\label{_r_t_c_8h_a5a85ec2ed7e470ac97c98e8909a6a5b6}} 
+\index{RTC.h@{RTC.h}!rtc\_wait\_valid@{rtc\_wait\_valid}}
+\index{rtc\_wait\_valid@{rtc\_wait\_valid}!RTC.h@{RTC.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_wait\_valid()}{rtc\_wait\_valid()}}
+{\footnotesize\ttfamily void() rtc\+\_\+wait\+\_\+valid (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

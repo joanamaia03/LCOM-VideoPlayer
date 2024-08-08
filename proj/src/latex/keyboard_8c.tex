@@ -1,0 +1,103 @@
+\hypertarget{keyboard_8c}{}\doxysection{keyboard.\+c File Reference}
+\label{keyboard_8c}\index{keyboard.c@{keyboard.c}}
+{\ttfamily \#include \char`\"{}keyboard.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{keyboard_8c_a02884ada1971dbade466081413210b18}{kbc\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{keyboard_8h_a02884ada1971dbade466081413210b18}{kbc\+\_\+subscribe\+\_\+int(uint8\+\_\+t $\ast$bit\+\_\+no)}} function is responsible for subscribing to keyboard interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8c_a1102381e6a9e876e05dd78c58ccb5673}{kbc\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{keyboard_8h_a1102381e6a9e876e05dd78c58ccb5673}{kbc\+\_\+unsubscribe\+\_\+int()}} function is responsible for unsubscribing from keyboard interrupts. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{keyboard_8c_aea970a154161a35f6894898a092ed70a}{kbc\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{keyboard_8h_aea970a154161a35f6894898a092ed70a}{kbc\+\_\+ih()}} function is the keyboard interrupt service routine. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8c_a6f10d1e426025f2c615c6149f1ec07ec}{kbd\+\_\+enable}} ()
+\begin{DoxyCompactList}\small\item\em The function \mbox{\hyperlink{keyboard_8h_a6f10d1e426025f2c615c6149f1ec07ec}{kbd\+\_\+enable()}} is responsible for enabling the keyboard. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8c_aac79ba6510333b101f30cddabb8d5631}{kbd\+\_\+scan\+\_\+esc}} ()
+\begin{DoxyCompactList}\small\item\em The function \mbox{\hyperlink{keyboard_8h_aac79ba6510333b101f30cddabb8d5631}{kbd\+\_\+scan\+\_\+esc()}} is responsible for scanning the keyboard until the \char`\"{}\+ESC\char`\"{} key is pressed. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8c_a4bda48842758ad9d2274f4fdb2b9262d}{kbd\+\_\+scan\+\_\+space}} ()
+\begin{DoxyCompactList}\small\item\em The function \mbox{\hyperlink{keyboard_8h_a4bda48842758ad9d2274f4fdb2b9262d}{kbd\+\_\+scan\+\_\+space()}} is responsible for scanning the keyboard until the space key is pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_a8b48b2f491b838fb124da7f6f709aefb}{scan}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{keyboard_8c_a730c45f6dc3144111bf26dd7657e35fe}{count\+\_\+kbc}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{keyboard_8c_aea970a154161a35f6894898a092ed70a}\label{keyboard_8c_aea970a154161a35f6894898a092ed70a}} 
+\index{keyboard.c@{keyboard.c}!kbc\_ih@{kbc\_ih}}
+\index{kbc\_ih@{kbc\_ih}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_ih()}{kbc\_ih()}}
+{\footnotesize\ttfamily void() kbc\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The \mbox{\hyperlink{keyboard_8h_aea970a154161a35f6894898a092ed70a}{kbc\+\_\+ih()}} function is the keyboard interrupt service routine. 
+
+\mbox{\Hypertarget{keyboard_8c_a02884ada1971dbade466081413210b18}\label{keyboard_8c_a02884ada1971dbade466081413210b18}} 
+\index{keyboard.c@{keyboard.c}!kbc\_subscribe\_int@{kbc\_subscribe\_int}}
+\index{kbc\_subscribe\_int@{kbc\_subscribe\_int}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_subscribe\_int()}{kbc\_subscribe\_int()}}
+{\footnotesize\ttfamily int() kbc\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+The \mbox{\hyperlink{keyboard_8h_a02884ada1971dbade466081413210b18}{kbc\+\_\+subscribe\+\_\+int(uint8\+\_\+t $\ast$bit\+\_\+no)}} function is responsible for subscribing to keyboard interrupts. 
+
+\mbox{\Hypertarget{keyboard_8c_a1102381e6a9e876e05dd78c58ccb5673}\label{keyboard_8c_a1102381e6a9e876e05dd78c58ccb5673}} 
+\index{keyboard.c@{keyboard.c}!kbc\_unsubscribe\_int@{kbc\_unsubscribe\_int}}
+\index{kbc\_unsubscribe\_int@{kbc\_unsubscribe\_int}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_unsubscribe\_int()}{kbc\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() kbc\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The \mbox{\hyperlink{keyboard_8h_a1102381e6a9e876e05dd78c58ccb5673}{kbc\+\_\+unsubscribe\+\_\+int()}} function is responsible for unsubscribing from keyboard interrupts. 
+
+\mbox{\Hypertarget{keyboard_8c_a6f10d1e426025f2c615c6149f1ec07ec}\label{keyboard_8c_a6f10d1e426025f2c615c6149f1ec07ec}} 
+\index{keyboard.c@{keyboard.c}!kbd\_enable@{kbd\_enable}}
+\index{kbd\_enable@{kbd\_enable}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{kbd\_enable()}{kbd\_enable()}}
+{\footnotesize\ttfamily int() kbd\+\_\+enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function \mbox{\hyperlink{keyboard_8h_a6f10d1e426025f2c615c6149f1ec07ec}{kbd\+\_\+enable()}} is responsible for enabling the keyboard. 
+
+\mbox{\Hypertarget{keyboard_8c_aac79ba6510333b101f30cddabb8d5631}\label{keyboard_8c_aac79ba6510333b101f30cddabb8d5631}} 
+\index{keyboard.c@{keyboard.c}!kbd\_scan\_esc@{kbd\_scan\_esc}}
+\index{kbd\_scan\_esc@{kbd\_scan\_esc}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{kbd\_scan\_esc()}{kbd\_scan\_esc()}}
+{\footnotesize\ttfamily int() kbd\+\_\+scan\+\_\+esc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function \mbox{\hyperlink{keyboard_8h_aac79ba6510333b101f30cddabb8d5631}{kbd\+\_\+scan\+\_\+esc()}} is responsible for scanning the keyboard until the \char`\"{}\+ESC\char`\"{} key is pressed. 
+
+\mbox{\Hypertarget{keyboard_8c_a4bda48842758ad9d2274f4fdb2b9262d}\label{keyboard_8c_a4bda48842758ad9d2274f4fdb2b9262d}} 
+\index{keyboard.c@{keyboard.c}!kbd\_scan\_space@{kbd\_scan\_space}}
+\index{kbd\_scan\_space@{kbd\_scan\_space}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{kbd\_scan\_space()}{kbd\_scan\_space()}}
+{\footnotesize\ttfamily int() kbd\+\_\+scan\+\_\+space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function \mbox{\hyperlink{keyboard_8h_a4bda48842758ad9d2274f4fdb2b9262d}{kbd\+\_\+scan\+\_\+space()}} is responsible for scanning the keyboard until the space key is pressed. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{keyboard_8c_a730c45f6dc3144111bf26dd7657e35fe}\label{keyboard_8c_a730c45f6dc3144111bf26dd7657e35fe}} 
+\index{keyboard.c@{keyboard.c}!count\_kbc@{count\_kbc}}
+\index{count\_kbc@{count\_kbc}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{count\_kbc}{count\_kbc}}
+{\footnotesize\ttfamily uint32\+\_\+t count\+\_\+kbc}
+
+\mbox{\Hypertarget{keyboard_8c_a8b48b2f491b838fb124da7f6f709aefb}\label{keyboard_8c_a8b48b2f491b838fb124da7f6f709aefb}} 
+\index{keyboard.c@{keyboard.c}!scan@{scan}}
+\index{scan@{scan}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{scan}{scan}}
+{\footnotesize\ttfamily uint8\+\_\+t scan}
+
